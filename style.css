@@ -28,4 +28,33 @@ a {
   background-size: cover;
   background-position: top center;
 }
+
+.nameandbutton {
+  padding-right: 950px;
+  position: fixed;
+}
+
+#hero h1 {
+  display: block;
+  color: black;
+  font-size: 65px;
+}
+
+#hero .cta {
+  display: inline-block;
+  border: 2px solid crimson;
+  color: crimson;
+  padding: 5px 5px;
+  font-size: 20px;
+  margin-top: 5px;
+  transition: 0.5s ease background-color;
+  width: 180px;
+  text-align: center;
+}
+
+#hero .cta:hover {
+  color: white;
+  background-color: crimson;
+}
+
 /* End Hero Section */
