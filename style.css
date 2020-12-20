@@ -24,32 +24,68 @@ a {
 
 /* Hero Section */
 #hero {
-  background-image: url(./images/hero-bg.png);
+  background-color: white;
   background-size: cover;
   background-position: top center;
 }
 
-.nameandbutton {
-  padding-right: 950px;
-  position: fixed;
+#hero .profile_image {
+  max-width: 900px;
+  border-radius: 500px;
+  height: 450px;
+  opacity: 0;
+  animation: profile_reveal 2s ease forwards;
+  animation-delay: 3.5s;
+}
+
+#hero .profile {
+  display: block;
+  position: absolute;
+  right: 190px;
+  top: 150px;
+}
+
+#hero .hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: auto 50px;
+  padding-left: 60px;
+  justify-content: flex-start;
 }
 
 #hero h1 {
   display: block;
-  color: black;
+  color: transparent;
   font-size: 65px;
+  position: relative;
+  animation: text_reveal 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+#hero h1:nth-child(1) {
+  animation-delay: 1.5s;
+}
+#hero h1:nth-child(2) {
+  animation-delay: 2.5s;
+}
+#hero h1:nth-child(3) {
+  animation-delay: 3.5s;
+  animation: text_name 1s ease forwards;
+  animation-delay: 3s;
 }
 
 #hero .cta {
   display: inline-block;
-  border: 2px solid crimson;
-  color: crimson;
+  border: 2px solid transparent;
+  color: transparent;
   padding: 5px 5px;
   font-size: 20px;
   margin-top: 5px;
   transition: 0.5s ease background-color;
   width: 180px;
   text-align: center;
+  animation: button_reveal 1s ease forwards;
+  animation-delay: 4s;
 }
 
 #hero .cta:hover {
@@ -57,4 +93,64 @@ a {
   background-color: crimson;
 }
 
+#hero h1 span {
+  position: absolute;
+  background-color: crimson;
+  height: 95%;
+  width: 0%;
+  left: 0;
+  top: 0;
+  animation: text_box 1s ease;
+  animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) span {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(2) span {
+  animation-delay: 2s;
+}
+#hero h1:nth-child(3) span {
+  animation-delay: 3s;
+}
+
 /* End Hero Section */
+
+/* Keyframes Section */
+@keyframes text_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: black;
+  }
+}
+
+@keyframes button_reveal {
+  100% {
+    border: 2px solid crimson;
+    color: crimson;
+  }
+}
+
+@keyframes profile_reveal {
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes text_name {
+  100% {
+    color: crimson;
+    font-weight: 1000;
+  }
+}
+/* End Keyframes Section */
