@@ -224,6 +224,7 @@ a {
 /* End Skills Section */
 
 /* Cards Section */
+
 .card {
   max-width: 380px;
   grid-template-columns: 300px;
@@ -231,9 +232,10 @@ a {
   grid-template-areas: "image" "text";
   border-radius: 10px;
   background: crimson;
-
+  float: left;
   text-align: center;
-  margin-left: 100px;
+  margin-left: 50px;
+  margin-right: 40px;
   margin-top: 100px;
   margin-bottom: 100px;
 }
