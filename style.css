@@ -117,7 +117,7 @@ a {
 .scroll_down {
   height: 50px;
   width: 30px;
-  border: 2px solid #222831;
+  border: 2px solid white;
   position: absolute;
   left: 50%;
   bottom: 30px;
@@ -130,21 +130,17 @@ a {
   position: absolute;
   top: 30%;
   left: 50%;
-  border: 2px solid crimson;
+  border: 2px solid white;
   height: 10px;
   width: 10px;
   transform: translate(-50%, -100%) rotate(45deg);
   border-top: transparent;
   border-left: transparent;
   animation: scroll-down 1s ease-in-out infinite;
+  animation-delay: 5s;
 }
 
-.scroll_down::after {
-  top: 35%;
-  animation-delay: 0.3s;
-}
-
-/* End Hero Section */
+/* End Hero Section*/
 
 /* Skills Section */
 #skills {
@@ -198,16 +194,16 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 300px;
+  padding-top: 200px;
 }
 
 #skills .cards {
-  flex-basis: 60%;
+  flex-basis: 80%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  border-radius: 25px;
+  border-radius: 15px;
   background-image: url(./images/img-1.png);
   background-size: cover;
   margin: 10px 5%;
@@ -216,7 +212,7 @@ a {
 
 #skills .cards h2 {
   color: crimson;
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -226,6 +222,53 @@ a {
   text-align: left;
 }
 /* End Skills Section */
+
+/* Cards Section */
+.card {
+  max-width: 380px;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px;
+  grid-template-areas: "image" "text";
+  border-radius: 10px;
+  background: crimson;
+
+  text-align: center;
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.card:hover {
+  animation: skills_shadow 0.5s ease-in-out forwards;
+}
+
+.card-image {
+  grid-area: image;
+  background: url(./images/hero-bg.png);
+  height: 250px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-size: cover;
+}
+.card-text {
+  grid-area: text;
+  padding: 50px;
+  padding-top: 25px;
+  text-align: left;
+}
+
+.card-text h2 {
+  color: white;
+  font-size: 25px;
+}
+
+.card-text p {
+  color: white;
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+/* End Cards Section */
 
 /* Keyframes Section */
 @keyframes text_box {
@@ -268,17 +311,29 @@ a {
 @keyframes scroll-down {
   0% {
     opacity: 0;
+    border-color: crimson;
   }
   30% {
     opacity: 1;
+    border-color: crimson;
   }
   60% {
     opacity: 1;
+    border-color: crimson;
   }
   100% {
     opacity: 0;
+
     top: 90%;
   }
 }
 
+@keyframes skills_shadow {
+  100% {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+}
 /* End Keyframes Section*/
