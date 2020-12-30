@@ -235,9 +235,9 @@ a {
   border: 2px solid crimson;
   color: crimson;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 550;
   padding: 8px;
-  margin-left: 650px;
+  margin-left: 45%;
   margin-top: 20px;
   margin-bottom: 10px;
   text-align: center;
@@ -334,7 +334,7 @@ a {
 .insta,
 .twitt,
 .linked {
-  height: 30px;
+  height: 25px;
   padding-right: 10px;
 }
 
@@ -342,6 +342,79 @@ a {
   padding-top: 15px;
 }
 /* End of Footer */
+
+/* Form */
+.form-box {
+  height: 480px;
+  width: 380px;
+  background-color: crimson;
+  position: relative;
+  margin: 6% auto;
+  padding: 5px;
+  border-radius: 25px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.contact-header {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.input-field {
+  top: 100px;
+  width: 350px;
+  position: absolute;
+}
+
+.text-field {
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 5px 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  border-bottom: 2px solid white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.message-field {
+  margin-top: 40px;
+  margin-left: 20px;
+  background: transparent;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  margin-left: 130px;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: 0.5s;
+  animation: 1s ease;
+}
+
+.submit-btn:hover {
+  background: white;
+  color: crimson;
+}
+/* End of Form */
 
 /* Media Query for Tablet
 
